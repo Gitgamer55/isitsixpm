@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Is it 6 PM?</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-size: 10rem; }
+    </style>
+</head>
+<body>
+    <div id="answer">NO</div>
+    <script>
+        function checkTime() {
+            const now = new Date();
+            // Checks if hours are 18 (6 PM) and minutes are 00
+            const isSix = now.getHours() === 18 && now.getMinutes() === 0;
+            document.getElementById('answer').innerText = isSix ? "YES" : "NO";
+        }
+        setInterval(checkTime, 1000);
+        checkTime();
+    </script>
+</body>
+</html>
